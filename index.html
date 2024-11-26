@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon premier site web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #monParagraphe {
+            color: black;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changerCouleur()">Cliquez-moi</button>
+    <p id="monParagraphe">Ce paragraphe va changer de couleur.</p>
+
+    <script>
+        function changerCouleur() {
+            document.getElementById("monParagraphe").style.color = "blue";
+        }
+    </script>
+</body>
+</html>
