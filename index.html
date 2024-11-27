@@ -3,141 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to TDA</title>
+    <title>Recrutement en cours</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
         }
         header {
-            background: linear-gradient(90deg, #007BFF, #0056b3);
+            background: linear-gradient(90deg, #8b0000, #4a0000);
             color: white;
             padding: 20px;
             text-align: center;
         }
         header h1 {
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
+            font-size: 2.5em;
             font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffe600;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
         }
         #home {
             background: url('https://files.catbox.moe/uv0jss.jpg') no-repeat center center/cover;
-            color: red;
+            color: #e63946;
             text-align: center;
-            padding: 100px 20px;
-            height: 400px;
+            padding: 150px 20px;
+            height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         #home h2 {
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 3em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
         }
-        #home p {
+        .recruitment {
             font-size: 1.2em;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-        #about, #services, #contact {
-            background: #fff;
-            margin: 20px 0;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 2px solid #e63946;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-shadow: 1px 1px 2px black;
         }
-        #services ul {
-            list-style: none;
-            padding: 0;
-        }
-        #services ul li {
-            margin: 10px 0;
-            padding: 10px;
-            background: #f4f4f4;
-            border-radius: 4px;
-            transition: transform 0.2s;
-        }
-        #services ul li:hover {
-            transform: translateX(10px);
+        .recruitment span {
+            color: #e63946;
+            font-weight: bold;
         }
         footer {
-            background: #333;
-            color: white;
+            background: #1a1a1a;
+            color: #e0e0e0;
             text-align: center;
             padding: 20px;
+            font-size: 0.9em;
         }
         footer p {
             margin: 0;
         }
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
             #home h2 {
-                font-size: 2em;
+                font-size: 2.5em;
+            }
+            .recruitment {
+                font-size: 1em;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to TDA</h1>
-        <nav>
-            <a href="#home">Accueil</a>
-            <a href="#about">À propos</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>Recrutement en cours</h1>
     </header>
 
     <section id="home">
-        <h2>Bienvenue sur TDA</h2>
-        <p>Explorez notre plateforme dynamique et découvrez notre univers.</p>
-    </section>
+        <h2>Oserez-vous rejoindre nos rangs ?</h2>
+        <div class="recruitment">
+            🩸 **Recrutement en cours**... Oserez-vous rejoindre nos rangs ? Les âmes courageuses, <span>dépourvues d'expérience</span>, sont appelées à prouver leur valeur. Écrivez-moi en IB si vous avez l'audace de tenter l'aventure.<br><br>
 
-    <section id="about">
-        <h2>À propos</h2>
-        <p>TDA est une plateforme conçue pour offrir des solutions innovantes à nos utilisateurs, tout en garantissant une expérience fluide et efficace.</p>
-    </section>
+            🩸 **NB** : Seuls les <span>novices</span>, les inexpérimentés, sont acceptés. Ceux qui ont déjà prêté serment à un autre clan… restez dans l’ombre où vous êtes.<br><br>
 
-    <section id="services">
-        <h2>Nos services</h2>
-        <ul>
-            <li>Service personnalisé pour répondre à vos besoins.</li>
-            <li>Support client 24/7 pour un accompagnement constant.</li>
-            <li>Plateforme intuitive avec des fonctionnalités avancées.</li>
-        </ul>
-    </section>
+            🩸 Vous serez les <span>héros</span> d’une odyssée inoubliable, plongés dans l’horreur et la gloire. Préparez-vous à affronter vos limites et à inscrire votre nom dans la <span>légende</span> !<br><br>
 
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <p>Email : <a href="mailto:contact@tda.com" style="color: #007BFF;">contact@tda.com</a></p>
-        <p>Téléphone : +33 1 23 45 67 89</p>
+            🩸 Ne tardez pas. L’occasion de marquer l’histoire est entre vos mains tremblantes...
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Welcome to TDA. Tous droits réservés.</p>
+        <p>&copy; 2024. Tous droits réservés. Votre destinée vous attend.</p>
     </footer>
 </body>
 </html>
