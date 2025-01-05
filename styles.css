@@ -1,3 +1,4 @@
+/* Style de base */
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +7,15 @@
 
 body, html {
   height: 100%;
-  font-family: 'Orbitron', sans-serif;
-  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
   background-color: #121212;
+  color: #00FF00;
+  overflow: hidden;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
 }
 
+/* Arrière-plan binaire défilant */
 .binary-background {
   position: absolute;
   top: 0;
@@ -35,29 +40,30 @@ body, html {
   }
 }
 
+/* Animation du texte binaire */
 .binary-background::before {
-  content: '1010100101101010101001100101010101010101010010101010101010101010101001010101010101010101010101010101010101010101010101010101010101010101010101010101010101';
+  content: '010101010010101010100110010101010101010101001010101010101010101010100101010101010101010101010101010101010101010101010101010101010101010101010101010101010101';
   animation: scrollBinary 10s linear infinite;
 }
 
+/* Contenu */
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
   z-index: 1;
+  color: #fff;
   animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
   color: #00FF00;
-  text-shadow: 0 0 15px #00FF00;
+  text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+  animation: glitch 1s infinite linear alternate-reverse;
 }
 
 ul {
@@ -66,31 +72,35 @@ ul {
 }
 
 li {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 10px 0;
-  color: #ffffff;
+  color: #00FF00;
   opacity: 0;
   animation: fadeInList 1s forwards;
 }
 
-li:nth-child(1) {
-  animation-delay: 1s;
-}
-
-li:nth-child(2) {
-  animation-delay: 1.2s;
-}
-
-li:nth-child(3) {
-  animation-delay: 1.4s;
-}
-
-li:nth-child(4) {
-  animation-delay: 1.6s;
-}
-
-li:nth-child(5) {
-  animation-delay: 1.8s;
+/* Animation de l'effet glitch */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
+  25% {
+    transform: translate(-2px, 1px);
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
+  50% {
+    transform: translate(2px, -1px);
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
+  75% {
+    transform: translate(-2px, 1px);
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
+  100% {
+    transform: translate(2px, -1px);
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00;
+  }
 }
 
 @keyframes fadeIn {
@@ -109,4 +119,4 @@ li:nth-child(5) {
   100% {
     opacity: 1;
   }
-}
+    }
