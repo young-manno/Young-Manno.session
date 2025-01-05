@@ -22,7 +22,7 @@ body, html {
   font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
-  z-index: -1;
+  z-index: -1; /* S'assure que le fond reste derrière le contenu */
   animation: scrollBinary 10s linear infinite;
 }
 
@@ -47,7 +47,7 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  z-index: 1;
+  z-index: 1; /* Assure que le contenu est au-dessus du fond binaire */
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -109,4 +109,4 @@ li:nth-child(5) {
   100% {
     opacity: 1;
   }
-    }
+}
